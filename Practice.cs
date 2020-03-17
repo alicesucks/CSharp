@@ -113,6 +113,39 @@ namespace practice
             }
             Console.WriteLine();
         }
+        public static void Rounding()
+        {
+            Console.WriteLine("Enter amount of numbers:");
+            int amount = Int32.Parse(Console.ReadLine());
+            double[] mas1 = new double[amount];
+            double[] mas2 = new double[amount];
+            Console.WriteLine("Fill in first array:");
+            for(int i = 0; i < mas1.Length; i++) {
+                double input = double.Parse(Console.ReadLine());
+                mas1[i] = input;
+            }
+            Console.WriteLine("Fill in second array:");
+            for (int i = 0; i < mas2.Length; i++) {
+                double input = double.Parse(Console.ReadLine());
+                mas2[i] = input;
+            }
+            foreach(var a in mas1) {
+                Console.Write("{0,5}", a);
+            }
+            Console.WriteLine();
+            foreach (var a in mas2) {
+                Console.Write("{0,5}", a);
+            }
+            Console.WriteLine();
+            int result;
+            double res;
+            for (int i = 0; i < mas1.Length && i < mas2.Length; i++) {
+                res = mas1[i] / mas2[i] + 0.5;
+                Console.WriteLine(res);
+                result = (int)res;
+                Console.WriteLine(result);
+            }
+        }
         static void Main(string[] args)
         {
 
