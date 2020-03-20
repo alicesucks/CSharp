@@ -191,6 +191,37 @@ namespace practice
                 i++;
             }
         }
+        public static void SumOfDigits()
+        {
+            Console.WriteLine("Enter amount of triplets ->");
+            int triplets = Int32.Parse(Console.ReadLine());
+            int[,] arrOfNumbers = new int[triplets,3];
+            int temp = 0;
+            int sum = 0;
+            int arrIndex = 0;
+            for(int i = 0; i < arrOfNumbers.GetLength(0); i++) {
+                Console.WriteLine("Loop Number: " + i);
+                for(int j = 0; j < arrOfNumbers.GetLength(1); j++) {
+                    Console.WriteLine("Enter number ->");
+                    int number = Int32.Parse(Console.ReadLine());
+                    arrOfNumbers[i, j] = number;
+                    number = 0;
+                }
+            }
+            for (int i = 0; i < arrOfNumbers.GetLength(0); i++) {
+                temp = arrOfNumbers[i, arrIndex] * arrOfNumbers[i, arrIndex + 1] + 
+                    arrOfNumbers[i,arrIndex + 2];
+                while(temp!=0) {
+                    sum = sum + temp % 10;
+                    temp = temp / 10;
+                }
+                Console.WriteLine("Sum of digits = " + sum);
+                sum = 0;
+                temp = 0;
+                arrIndex = 0;
+                Console.WriteLine();
+            }
+        }
         static void Main(string[] args)
         {
 
