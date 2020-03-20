@@ -167,6 +167,30 @@ namespace practice
                 else Console.WriteLine("Result in Celsius -> " + (int)(res - 0.5));
             }
         }
+        // arithmetic progression 
+        public static void ArithmeticProgression()
+        {
+            int i = 0, j = 0;
+            int res = 0, sum = 0;
+            while (i < 8) { 
+                Console.WriteLine("Enter start value ->");
+                int start_value = Int32.Parse(Console.ReadLine());
+                Console.WriteLine("Enter step value ->");
+                int step_value = Int32.Parse(Console.ReadLine());
+                Console.WriteLine("Enter how many of start values should be accounted ->");
+                int accounted = Int32.Parse(Console.ReadLine());
+                while (j < accounted)
+                {
+                    res = start_value + j * step_value;
+                    sum += res;
+                    j++;
+                }
+                Console.WriteLine("SUM - > " + sum);
+                j = 0;
+                sum = 0;
+                i++;
+            }
+        }
         static void Main(string[] args)
         {
 
