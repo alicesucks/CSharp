@@ -146,6 +146,27 @@ namespace practice
                 Console.WriteLine(result);
             }
         }
+        
+        // adding new example
+        // fahrenheit to celsius converter
+        public static void FahrenheitToCelsius()
+        {
+            double res = new double();
+            double[] F_arr = new double[31];
+            for(int i = 0; i < F_arr.Length; i++) {
+                Console.WriteLine("Enter Fahrenheits ->");
+                double F = Double.Parse(Console.ReadLine());
+                F_arr[i] = F;
+            }
+            for(int i = 0; i < F_arr.Length; i++) {
+                res = ((5.0 / 9) * (F_arr[i] - 32));
+                if(res > 0)
+                {
+                    Console.WriteLine("Result in Celsius -> " + (int)(res + 0.5));
+                }
+                else Console.WriteLine("Result in Celsius -> " + (int)(res - 0.5));
+            }
+        }
         static void Main(string[] args)
         {
 
